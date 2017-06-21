@@ -1,0 +1,10 @@
+<launch>
+	<node name="stage" pkg="stage_ros" type="stageros"
+	      args="$(find lab1)/world/pursuer_evader.world"/>
+
+	<node name="evader_node" pkg="lab1" type="evader_node.py" ns="robot_0" />
+	<node name="listener_node" pkg="lab1" type="listener_node.py" ns="robot_1" />
+
+	<node name="broadcaster_node" pkg="lab1" type="broadcaster_node.py" ns="robot_0" />	
+	<node name="broadcaster_node" pkg="lab1" type="broadcaster_node.py" ns="robot_1" />     
+</launch>

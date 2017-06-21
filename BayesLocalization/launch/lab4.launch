@@ -1,0 +1,5 @@
+<launch>
+  <param name="bag_file" type="string" value="$(find lab4)/grid.bag" />
+  <node name="localize" pkg="lab4" type="localize.py" args="$(find lab4)" output="screen" />
+  <node pkg="rviz" type="rviz" name="rviz" args="-d $(find lab4)/default.rviz"/>
+</launch>
